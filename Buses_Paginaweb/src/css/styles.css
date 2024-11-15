@@ -1,0 +1,257 @@
+:root {
+    --Colorfondo: #FFFFFF;
+    --colorCaja: #3A2D2D;
+    --colorFondo: #E4DEC9;
+    --colorSecundario: #F4F4F9;
+    --colorLetraPrimaria: #FFFFFF;
+    --colorLetraSecundaria: #000000;
+    --fuentePrincipal: "Hind", sans-serif;
+}
+
+/* Estilos globales */
+html {
+    background-color: var(--Colorfondo);
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--colorCaja);
+    padding: 0.5rem 2rem;
+}
+
+.navbar__container {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.navbar__logo {
+    color: var(--colorLetraPrimaria);
+    cursor: pointer;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+ul li a {
+    color: var(--colorLetraPrimaria);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+ul li a:hover {
+    font-size: 1.2rem;
+    transform: scale(1.1);
+}
+
+/* Sección Principal */
+.intro {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: flex-start; /* Cambiado a flex-start para alinear el contenido en la parte superior */
+    padding: 2rem;
+    background-color: var(--colorFondo);
+    color: var(--colorLetraPrimaria);
+    flex-direction: file ; /* Cambiado a column para colocar el texto y la imagen en columna */
+    text-align: center; /* Centra el texto */
+}
+
+.intro-text {
+    width: 100%; /* Ajusta el ancho del texto */
+    margin-bottom: 2rem; /* Añade espacio debajo del texto */
+}
+
+.intro-text p {
+    margin-top: 10rem;
+    padding: 0 5rem; /* Ajusta el padding para que no sea excesivo */
+    margin-bottom: 2rem;
+    text-align: center; /* Centra el texto */
+}
+
+.intro-text button {
+    margin: 0.5rem; /* Espaciado entre botones */
+    padding: 1rem;
+    background-color: #ffffff;
+    color: var(--colorLetraSecundaria);
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.intro-text button:hover {
+    background-color: var(--colorCaja);
+    font-size: 1.1rem;
+    transform: scale(1.1);
+}
+
+.intro img {
+    width: 100%; /* Ajusta la imagen para que ocupe la mitad del contenedor */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor */
+    border-radius: 1rem; /* Opcional: añade bordes redondeados */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/*Se acaba Seccion App*/
+
+/* Sección de App */
+.app-section {
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--colorSecundario);
+    justify-content: space-between; /* Distribuir espacio entre la imagen y el texto */
+}
+
+.app-image img {
+    width: 20rem; /* Establecer un tamaño fijo para la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 1rem;
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.app-image img:hover {
+    transform: scale(1.1); /* Aumentar el tamaño de la imagen al pasar el cursor */
+}
+
+.app-content {
+    padding-left: 2rem;
+    text-align: center; /* Justificar el texto al centro */
+    flex: 1; /* Permitir que el contenido ocupe el espacio restante */
+}
+
+.app-content h2, /* Asegúrate de que el título también esté centrado */
+.app-content p {
+    margin: 0; /* Eliminar márgenes para un mejor control del espaciado */
+}
+
+
+.app-buttons {
+    display: flex; /* Usar flexbox para alinear los botones */
+    justify-content: center; /* Centrar los botones */
+    margin-top: 1rem; /* Espaciado superior para los botones */
+}
+
+.app-buttons img {
+    width: 6rem;
+    margin-right: 1rem;
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.app-buttons img:hover {
+    transform: scale(1.05); /* Aumentar el tamaño de los botones al pasar el cursor */
+}
+
+/* Sección de Rutas */
+.routes-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem;
+    background-color: var(--colorFondo);
+}
+
+.route {
+    text-align: center;
+    display: flex; /* Usar flexbox para alinear el contenido */
+    flex-direction: column; /* Colocar texto e imagen en columna */
+    align-items: center; /* Centrar el contenido */
+}
+
+.route img {
+    max-width: 90%; /* Escala la imagen hasta el tamaño máximo definido */
+    height: 12rem; /* Establecer una altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor */
+    border-radius: 1rem;
+}
+
+.route p {
+    margin-top: 1rem; /* Espaciado entre la imagen y el texto */
+    text-align: center; /* Centra el texto */
+}
+
+/* Sección Información */
+.info-section {
+    background-color: var(--colorCaja); 
+    padding: 4rem 2rem; 
+    text-align: left; 
+}
+
+.info-content {
+    display: flex; 
+    flex-direction: row; 
+    align-items: flex-start; 
+    justify-content: space-between; 
+    gap: 2rem; 
+}
+
+.info-text {
+    color: var(--colorLetraPrimaria);
+    max-width: 60rem; /* Ancho máximo del texto */
+    flex: 1; /* Permitir que el texto ocupe el espacio disponible */
+}
+
+.info-images {
+    display: flex; /* Usar flexbox para las imágenes */
+    flex-direction: column; /* Colocar imágenes en columna */
+    gap: 1rem; /* Espaciado entre imágenes */
+}
+
+.info-images img {
+    width: 100%; /* Ancho completo */
+    max-width: 30rem; /* Ancho máximo de las imágenes */
+    height: auto; /* Mantener la proporción */
+    border-radius: 1.5rem; /* Bordes */
+    align-self: flex-end; /* Alinear imágenes a la derecha */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--colorCaja);
+    color: var(--colorLetraPrimaria);
+    padding: 2rem;
+    text-align: center; 
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Espacio entre texto e imágenes */
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espacio entre los iconos */
+}
+
+.footer-socials img {
+    width: 3rem;
+    margin: 0; /* Eliminar el margen adicional */
+    cursor: pointer;
+}
